@@ -97,131 +97,23 @@ const HeroSection = () => (
           </div>
           
           {/* Avatar do Motorista com Carro */}
-          <div className="relative">
-            <svg width="500" height="420" viewBox="0 0 500 420" className="drop-shadow-2xl">
-              {/* Sombra no chão */}
-              <ellipse cx="250" cy="400" rx="180" ry="25" fill="#00000020"/>
-              
-              {/* Carro Executivo Preto - Traseira */}
-              <defs>
-                <linearGradient id="carGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#2d3748"/>
-                  <stop offset="50%" stopColor="#1a202c"/>
-                  <stop offset="100%" stopColor="#171923"/>
-                </linearGradient>
-                <radialGradient id="carShine" cx="50%" cy="30%">
-                  <stop offset="0%" stopColor="#4a5568" stopOpacity="0.6"/>
-                  <stop offset="100%" stopColor="#1a202c" stopOpacity="0"/>
-                </radialGradient>
-              </defs>
-              
-              {/* Corpo do carro */}
-              <path d="M 100 280 L 120 240 L 380 240 L 400 280 L 410 320 L 90 320 Z" fill="url(#carGradient)" stroke="#0f1419" strokeWidth="2"/>
-              
-              {/* Teto do carro */}
-              <path d="M 140 240 Q 160 200 250 190 Q 340 200 360 240" fill="url(#carGradient)" stroke="#0f1419" strokeWidth="2"/>
-              
-              {/* Vidros */}
-              <path d="M 145 238 Q 162 205 210 200 L 210 238 Z" fill="#1e3a8a" opacity="0.6"/>
-              <path d="M 290 238 L 290 200 Q 338 205 355 238 Z" fill="#1e3a8a" opacity="0.6"/>
-              <path d="M 215 238 L 215 202 L 285 202 L 285 238 Z" fill="#1e3a8a" opacity="0.4"/>
-              
-              {/* Detalhes cromados */}
-              <rect x="90" y="305" width="320" height="3" fill="#cbd5e0"/>
-              <rect x="100" y="275" width="300" height="2" fill="#a0aec0"/>
-              
-              {/* Grade frontal */}
-              <rect x="95" y="285" width="40" height="25" rx="2" fill="#1a202c"/>
-              <line x1="100" y1="287" x2="130" y2="287" stroke="#718096" strokeWidth="1"/>
-              <line x1="100" y1="292" x2="130" y2="292" stroke="#718096" strokeWidth="1"/>
-              <line x1="100" y1="297" x2="130" y2="297" stroke="#718096" strokeWidth="1"/>
-              <line x1="100" y1="302" x2="130" y2="302" stroke="#718096" strokeWidth="1"/>
-              
-              {/* Farol */}
-              <ellipse cx="110" cy="295" rx="8" ry="6" fill="#fbbf24" opacity="0.8"/>
-              <ellipse cx="110" cy="295" rx="5" ry="4" fill="#fef3c7"/>
-              
-              {/* Reflexo do carro */}
-              <ellipse cx="250" cy="260" rx="120" ry="40" fill="url(#carShine)"/>
-              
-              {/* Roda traseira */}
-              <circle cx="150" cy="320" r="28" fill="#1a202c" stroke="#0f1419" strokeWidth="3"/>
-              <circle cx="150" cy="320" r="18" fill="#2d3748"/>
-              <circle cx="150" cy="320" r="10" fill="#4a5568"/>
-              
-              {/* Roda dianteira */}
-              <circle cx="350" cy="320" r="28" fill="#1a202c" stroke="#0f1419" strokeWidth="3"/>
-              <circle cx="350" cy="320" r="18" fill="#2d3748"/>
-              <circle cx="350" cy="320" r="10" fill="#4a5568"/>
-              
-              {/* Motorista ao lado do carro */}
-              {/* Pernas */}
-              <rect x="215" y="290" width="22" height="90" fill="#704214" rx="10"/>
-              <rect x="245" y="290" width="22" height="90" fill="#5c2f0a" rx="10"/>
-              
-              {/* Sapatos */}
-              <ellipse cx="226" cy="380" rx="14" ry="9" fill="#1a202c"/>
-              <ellipse cx="256" cy="380" rx="14" ry="9" fill="#1a202c"/>
-              
-              {/* Corpo */}
-              <ellipse cx="241" cy="240" rx="50" ry="65" fill="#4299e1"/>
-              
-              {/* Cinto */}
-              <rect x="195" y="270" width="92" height="6" fill="#5c2f0a" rx="3"/>
-              <rect x="235" y="268" width="12" height="10" fill="#cbd5e0" rx="2"/>
-              
-              {/* Braços cruzados */}
-              <ellipse cx="195" cy="245" rx="18" ry="50" fill="#4299e1" transform="rotate(-30 195 245)"/>
-              <ellipse cx="287" cy="245" rx="18" ry="50" fill="#3182ce" transform="rotate(30 287 245)"/>
-              
-              {/* Mãos */}
-              <ellipse cx="210" cy="260" rx="11" ry="13" fill="#f4a460"/>
-              <ellipse cx="272" cy="260" rx="11" ry="13" fill="#f4a460"/>
-              
-              {/* Pescoço */}
-              <rect x="221" y="195" width="40" height="25" fill="#f4a460" rx="8"/>
-              
-              {/* Cabeça */}
-              <ellipse cx="241" cy="180" rx="42" ry="48" fill="#f4a460"/>
-              
-              {/* Cabelo */}
-              <ellipse cx="241" cy="155" rx="43" ry="35" fill="#3e2723"/>
-              <path d="M 200 160 Q 210 145 241 140 Q 272 145 282 160" fill="#3e2723"/>
-              
-              {/* Orelhas */}
-              <ellipse cx="200" cy="180" rx="8" ry="12" fill="#e89b6f"/>
-              <ellipse cx="282" cy="180" rx="8" ry="12" fill="#e89b6f"/>
-              
-              {/* Olhos */}
-              <ellipse cx="225" cy="175" rx="6" ry="8" fill="#ffffff"/>
-              <ellipse cx="257" cy="175" rx="6" ry="8" fill="#ffffff"/>
-              <circle cx="226" cy="177" r="4" fill="#2d3748"/>
-              <circle cx="258" cy="177" r="4" fill="#2d3748"/>
-              <circle cx="227" cy="176" r="2" fill="#ffffff"/>
-              <circle cx="259" cy="176" r="2" fill="#ffffff"/>
-              
-              {/* Sobrancelhas */}
-              <path d="M 218 168 Q 225 165 232 168" stroke="#3e2723" strokeWidth="2" fill="none"/>
-              <path d="M 250 168 Q 257 165 264 168" stroke="#3e2723" strokeWidth="2" fill="none"/>
-              
-              {/* Nariz */}
-              <path d="M 241 185 L 241 195" stroke="#d4915e" strokeWidth="2" strokeLinecap="round"/>
-              <ellipse cx="236" cy="197" rx="3" ry="2" fill="#d4915e"/>
-              <ellipse cx="246" cy="197" rx="3" ry="2" fill="#d4915e"/>
-              
-              {/* Barba */}
-              <ellipse cx="241" cy="205" rx="30" ry="18" fill="#3e2723"/>
-              <path d="M 215 195 Q 220 210 241 215 Q 262 210 267 195" fill="#3e2723"/>
-              
-              {/* Bigode */}
-              <ellipse cx="230" cy="200" rx="12" ry="4" fill="#3e2723"/>
-              <ellipse cx="252" cy="200" rx="12" ry="4" fill="#3e2723"/>
-              
-              {/* Boca sorrindo */}
-              <path d="M 225 205 Q 241 212 257 205" stroke="#ffffff" strokeWidth="2" fill="none" strokeLinecap="round"/>
-              <line x1="228" y1="207" x2="234" y2="207" stroke="#ffffff" strokeWidth="1.5"/>
-              <line x1="248" y1="207" x2="254" y2="207" stroke="#ffffff" strokeWidth="1.5"/>
-            </svg>
+          <div className="relative bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl shadow-2xl p-8">
+            <img 
+              src="/images/avatar-motorista.svg" 
+              alt="Motorista Profissional LSB" 
+              className="w-full h-auto rounded-2xl"
+            />
+            <div className="absolute bottom-4 left-4 right-4 text-center bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg">
+              <div className="flex justify-center gap-1 mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-yellow-400 text-lg">★</span>
+                ))}
+              </div>
+              <p className="text-gray-700 text-sm italic">
+                "Motorista profissional e confiável!"
+              </p>
+              <p className="text-gray-600 text-xs mt-1 font-semibold">- Cliente via LSB</p>
+            </div>
           </div>
         </motion.div>
       </div>
