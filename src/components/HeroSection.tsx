@@ -99,9 +99,9 @@ const HeroSection = () => (
           {/* Avatar do Motorista com Carro */}
           <div className="relative bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl shadow-2xl p-8">
             <img 
-              src="/images/avatar-motorista.svg" 
+              src="/images/avatar-motorista.png" 
               alt="Motorista Profissional LSB" 
-              className="w-full h-auto rounded-2xl"
+              className="w-full h-auto rounded-2xl shadow-lg"
             />
             <div className="absolute bottom-4 left-4 right-4 text-center bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg">
               <div className="flex justify-center gap-1 mb-2">
