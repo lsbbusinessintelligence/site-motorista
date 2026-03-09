@@ -84,7 +84,7 @@ const HeroSection = () => (
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="hidden lg:flex flex-col items-center gap-6"
+          className="flex flex-col items-center gap-6 mt-12 lg:mt-0"
         >
           {/* Caixa de diálogo pequena ACIMA */}
           <div className="relative max-w-[320px]">
